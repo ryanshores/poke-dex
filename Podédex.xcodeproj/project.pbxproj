@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18635A0DF1BFA23C75ABD718 /* Pods_Pode_dex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2D22F37C271F7BCEF0F4C6 /* Pods_Pode_dex.framework */; };
 		F63034A71F6C4A6F000DA410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63034A61F6C4A6F000DA410 /* AppDelegate.swift */; };
 		F63034A91F6C4A6F000DA410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63034A81F6C4A6F000DA410 /* ViewController.swift */; };
 		F63034AC1F6C4A6F000DA410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63034AA1F6C4A6F000DA410 /* Main.storyboard */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		472BE7657FDFB9998071D785 /* Pods-Podédex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podédex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podédex/Pods-Podédex.release.xcconfig"; sourceTree = "<group>"; };
+		5674FAE710C122D471CB33D2 /* Pods-Podédex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podédex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podédex/Pods-Podédex.debug.xcconfig"; sourceTree = "<group>"; };
+		9F2D22F37C271F7BCEF0F4C6 /* Pods_Pode_dex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pode_dex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63034A31F6C4A6F000DA410 /* Podédex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Podédex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63034A61F6C4A6F000DA410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F63034A81F6C4A6F000DA410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18635A0DF1BFA23C75ABD718 /* Pods_Pode_dex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181BF8B8F370DDD31F299DF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F2D22F37C271F7BCEF0F4C6 /* Pods_Pode_dex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		319A339E8720B9F0766C7FB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5674FAE710C122D471CB33D2 /* Pods-Podédex.debug.xcconfig */,
+				472BE7657FDFB9998071D785 /* Pods-Podédex.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F630349A1F6C4A6E000DA410 = {
 			isa = PBXGroup;
 			children = (
 				F63034A51F6C4A6F000DA410 /* Podédex */,
 				F63034A41F6C4A6F000DA410 /* Products */,
+				319A339E8720B9F0766C7FB0 /* Pods */,
+				181BF8B8F370DDD31F299DF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F63034B51F6C4A6F000DA410 /* Build configuration list for PBXNativeTarget "Podédex" */;
 			buildPhases = (
+				60A7146F8619C1F76DE40690 /* [CP] Check Pods Manifest.lock */,
 				F630349F1F6C4A6E000DA410 /* Sources */,
 				F63034A01F6C4A6E000DA410 /* Frameworks */,
 				F63034A11F6C4A6E000DA410 /* Resources */,
+				32F94B5FB71A32D5BF3CDF9E /* [CP] Embed Pods Frameworks */,
+				996C53DCF44545D69AE71874 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +227,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32F94B5FB71A32D5BF3CDF9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Podédex/Pods-Podédex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podédex/Pods-Podédex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60A7146F8619C1F76DE40690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Podédex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		996C53DCF44545D69AE71874 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podédex/Pods-Podédex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F630349F1F6C4A6E000DA410 /* Sources */ = {
@@ -332,6 +413,7 @@
 		};
 		F63034B61F6C4A6F000DA410 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5674FAE710C122D471CB33D2 /* Pods-Podédex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77H7V8G86J;
@@ -345,6 +427,7 @@
 		};
 		F63034B71F6C4A6F000DA410 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 472BE7657FDFB9998071D785 /* Pods-Podédex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77H7V8G86J;
