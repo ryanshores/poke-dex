@@ -34,6 +34,23 @@ class PokemonDetailVC: UIViewController {
         
         nameLabel.text = pokemon.name
 
+        pokemon.downloadPokemonDetail {
+            
+            print("Did arrive here")
+            //Whatever we write here will only be called after the network call is complete
+            
+            self.updateUI()
+            
+            
+        }
+        
+        
+    }
+    
+    
+    func updateUI() {
+        
+        
         
     }
 
